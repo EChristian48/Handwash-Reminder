@@ -1,15 +1,15 @@
 class CountdownStatus {
-  bool _isOn = false;
+  static bool _isOn = false;
 
-  bool getStatus() {
+  static bool getStatus() {
     return _isOn;
   }
 
-  void turnOn() {
+  static void turnOn() {
     _isOn = true;
   }
 
-  void turnOff() {
+  static void turnOff() {
     _isOn = false;
   }
 }

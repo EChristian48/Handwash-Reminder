@@ -1,8 +1,11 @@
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
-import 'model/countdown_status.dart';
 
 class SwitchWidget extends StatefulWidget {
+  final Function setTimerState;
+
+  SwitchWidget(this.setTimerState);
+
   @override
   _SwitchWidgetState createState() => _SwitchWidgetState();
 }
@@ -26,10 +29,10 @@ class _SwitchWidgetState extends State<SwitchWidget> {
           setState(() {
             if (animationName == "A1") {
               switchState = 3;
-              CountdownStatus().turnOff();
+              widget.setTimerState(false);
             } else if (animationName == "A2") {
               switchState = 4;
-              CountdownStatus().turnOn();
+              widget.setTimerState(true);
             }
           });
         },

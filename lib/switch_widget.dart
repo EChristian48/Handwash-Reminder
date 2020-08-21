@@ -1,5 +1,6 @@
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
+import 'model/countdown_status.dart';
 
 class SwitchWidget extends StatefulWidget {
   @override
@@ -25,8 +26,10 @@ class _SwitchWidgetState extends State<SwitchWidget> {
           setState(() {
             if (animationName == "A1") {
               switchState = 3;
+              CountdownStatus().turnOff();
             } else if (animationName == "A2") {
               switchState = 4;
+              CountdownStatus().turnOn();
             }
           });
         },

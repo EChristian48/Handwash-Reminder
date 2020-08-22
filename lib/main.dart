@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'switch_widget.dart';
+import 'model/switch_widget.dart';
 import 'components/countdown_timer.dart';
 
 void main() => runApp(HomePage());

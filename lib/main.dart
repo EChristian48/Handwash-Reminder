@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'model/switch_widget.dart';
+import 'components/switch_widget.dart';
 import 'components/countdown_timer.dart';
 
 void main() => runApp(HomePage());
@@ -20,7 +20,15 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    var timer = isTimerStarted ? CountdownTimer() : Text('NYALAIN WOI');
+    var timer = isTimerStarted
+        ? CountdownTimer()
+        : Text(
+            'Turn on the switch if you are going outside the house',
+            style: TextStyle(
+              fontSize: 24,
+            ),
+            textAlign: TextAlign.center,
+          );
 
     return MaterialApp(
       home: Scaffold(
@@ -41,9 +49,12 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Expanded(
-              child: Container(
-                child: timer,
-              ), // the countdown goes here
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Center(
+                  child: timer,
+                ),
+              ),
             ),
           ],
         ),

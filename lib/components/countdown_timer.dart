@@ -11,7 +11,7 @@ class _CountdownTimerState extends State<CountdownTimer> {
   @override
   Widget build(BuildContext context) {
     return SlideCountdownClock(
-      duration: Duration(seconds: 5),
+      duration: Duration(minutes: 30),
       textStyle: TextStyle(
         fontSize: 40,
       ),

@@ -15,6 +15,7 @@ dependencies:
   cupertino_icons: ^0.1.3
   flare_flutter: ^2.0.6
   slide_countdown_clock: ^1.0.3
+  rflutter_alert: ^1.0.3
 
 dev_dependencies:
   flutter_test:
@@ -23,7 +24,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/on_off.flr
+    - assets/
 
   # fonts:
   #   - family: Schyler

@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
 
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey.shade300,
+        backgroundColor: Color(0xFFc5eff7),
         body: Column(
           children: [
             SafeArea(

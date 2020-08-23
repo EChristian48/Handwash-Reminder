@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'components/switch_widget.dart';
 import 'components/countdown_timer.dart';
+import 'components/switch_widget.dart';
 
 void main() => runApp(HomePage());
 
@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   var isTimerStarted = false;
 
-  setTimerState(bool state) {
+  void setTimerState(bool state) {
     setState(() {
       isTimerStarted = state;
     });
@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     var timer = isTimerStarted
-        ? CountdownTimer()
+        ? CountdownTimer(Duration(minutes: 30), setTimerState)
         : Text(
             'Turn on the switch if you are going outside the house',
             style: TextStyle(

@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     var timer = isTimerStarted
-        ? CountdownTimer(Duration(seconds: 2), setTimerState)
+        ? CountdownTimer(Duration(minutes: 30), setTimerState)
         : Text(
             'Turn on the switch if you are going outside the house',
             style: TextStyle(
